@@ -24,7 +24,7 @@ public class CsvToXlsConverter {
             csvFileReader = new FileReader(csvPath);
         } catch (FileNotFoundException e) {
             System.out.println("Sorry, file not found.");
-            return;
+            System.exit(1);
         }
 
         CSVReader csvReader = new CSVReader(csvFileReader);
@@ -51,7 +51,7 @@ public class CsvToXlsConverter {
 
         } catch (IOException ioe) {
             System.out.println("Some problem in CSV format. Sorry request could not be processed.");
-            return;
+            System.exit(2);
         }
 
 
